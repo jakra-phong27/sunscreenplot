@@ -1,12 +1,28 @@
 /* assets/css/style.css */
 
+/* Define Earthtone/Natural color palette */
+:root {
+    --color-background-light: #FDFBF6; /* Very light cream/off-white */
+    --color-primary-green: #8BC34A; /* Soft, natural green */
+    --color-primary-green-dark: #689F38; /* Darker green for hover/accents */
+    --color-accent-brown: #A1887F; /* Muted brown/taupe for footer/secondary elements */
+    --color-accent-brown-dark: #795548; /* Darker brown */
+    --color-text-dark: #4A4A4A; /* Dark grey for main text for readability */
+    --color-text-medium: #757575; /* Medium grey for descriptions */
+    --color-highlight-yellow: #FFF8E1; /* Soft yellow for highlight boxes */
+    --color-highlight-border: #FFD54F; /* A slightly stronger yellow for borders */
+    --color-highlight-text: #8D6E63; /* Brownish text for highlights */
+    --color-divider: #E0E0E0; /* Light grey for dividers */
+}
+
+
 /* General Body Styles */
 body {
     font-family: 'Anuphan', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6; /* Light background for the page */
-    color: #333;
+    background-color: var(--color-background-light); /* Light background for the page */
+    color: var(--color-text-dark);
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -15,7 +31,7 @@ body {
 
 /* Header and Navigation Bar */
 .header {
-    background-color: #28a745; /* Green for the header */
+    background-color: var(--color-primary-green); /* Green for the header */
     color: #ffffff;
     padding: 15px 0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -45,7 +61,7 @@ body {
 }
 
 .navbar .logo:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly more visible hover */
 }
 
 .nav-links {
@@ -64,7 +80,7 @@ body {
 }
 
 .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.25); /* More visible hover */
     transform: translateY(-2px);
 }
 
@@ -73,7 +89,7 @@ body {
     max-width: 900px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #ffffff; /* Keep white for content background */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     flex-grow: 1; /* Allows container to take available space */
@@ -84,12 +100,12 @@ body {
     text-align: center;
     margin-bottom: 40px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--color-divider);
 }
 
 .ep-header h1 {
     font-size: 2.5rem;
-    color: #28a745; /* Green for main titles */
+    color: var(--color-primary-green); /* Green for main titles */
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -102,20 +118,20 @@ body {
 .ep-header h1 .fas,
 .ep-header h1 .fab {
     font-size: 2.8rem;
-    color: #4CAF50; /* Slightly darker green for main icons */
+    color: var(--color-primary-green-dark); /* Darker green for main icons */
 }
 
 .ep-description {
     font-size: 1.1rem;
     font-style: italic;
-    color: #555;
+    color: var(--color-text-medium);
     margin: 15px auto 10px;
     max-width: 700px;
 }
 
 .ep-keywords {
     font-size: 0.9rem;
-    color: #888;
+    color: var(--color-text-medium);
     margin-top: 10px;
     font-weight: 500;
 }
@@ -131,7 +147,7 @@ body {
 .content-block {
     display: flex;
     align-items: center;
-    background-color: #f9fdf9; /* Very light green for content blocks */
+    background-color: #FFFFFF; /* Pure white for content blocks for clean look */
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     padding: 25px;
@@ -154,10 +170,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e6f7ea; /* Light green background for icons */
+    background-color: rgba(139, 195, 74, 0.1); /* Light transparent green for icons */
     border-radius: 50%; /* Circular background */
     margin: 0 30px; /* Space around icon */
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
 }
 
 .content-block.reverse .icon-wrapper {
@@ -167,7 +183,7 @@ body {
 .content-block .fas,
 .content-block .fab {
     font-size: 3.5rem;
-    color: #28a745; /* Green icon color */
+    color: var(--color-primary-green); /* Green icon color */
 }
 
 .content-block .icon-large { /* For larger icons in index page */
@@ -179,11 +195,11 @@ body {
 }
 
 .content-block .text-content h2 {
-    color: #28a745;
+    color: var(--color-text-dark);
     font-size: 1.8rem;
     margin-top: 0;
     margin-bottom: 15px;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid var(--color-divider);
     padding-bottom: 10px;
 }
 
@@ -202,19 +218,19 @@ body {
 
 .content-block .text-content ul li .fas,
 .content-block .text-content ul li .fab {
-    color: #4CAF50;
+    color: var(--color-primary-green-dark); /* Darker green for list icons */
     font-size: 1.1rem;
     margin-top: 3px; /* Align icon with text */
 }
 
 .highlight-box {
-    background-color: #fff3cd; /* Light yellow background */
-    border-left: 5px solid #ffc107; /* Yellow left border */
+    background-color: var(--color-highlight-yellow); /* Soft yellow background */
+    border-left: 5px solid var(--color-highlight-border); /* Yellow left border */
     padding: 15px 20px;
     margin-top: 25px;
     border-radius: 5px;
     font-style: italic;
-    color: #856404; /* Darker yellow text */
+    color: var(--color-highlight-text); /* Brownish text for highlights */
     font-weight: 500;
 }
 
@@ -226,7 +242,7 @@ body {
 }
 
 .highlight-box .fas {
-    color: #ffc107;
+    color: var(--color-highlight-border);
 }
 
 
@@ -234,7 +250,7 @@ body {
 .ep-section {
     margin-bottom: 60px; /* Space between each EP */
     padding-bottom: 40px;
-    border-bottom: 2px dashed #e0e0e0; /* Visual separator between EPs */
+    border-bottom: 2px dashed var(--color-divider); /* Visual separator between EPs */
 }
 
 .ep-section:last-child {
@@ -242,25 +258,10 @@ body {
     margin-bottom: 0;
 }
 
-.ep-section .ep-header h1 {
-    font-size: 2.2rem;
-    color: #28a745;
-    margin-top: 0;
-}
-.ep-section .ep-description {
-    font-style: italic;
-    color: #666;
-}
-.ep-section .ep-keywords {
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 10px;
-}
-
 /* Call to Action Specific Styling for single page or nav buttons */
 .nav-button {
     display: inline-block;
-    background-color: #28a745; /* Green button */
+    background-color: var(--color-primary-green); /* Green button */
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -271,7 +272,7 @@ body {
 }
 
 .nav-button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: var(--color-primary-green-dark); /* Darker green on hover */
     transform: translateY(-2px);
 }
 
@@ -280,7 +281,7 @@ body {
     justify-content: space-between;
     margin-top: 50px;
     padding-top: 20px;
-    border-top: 1px dashed #e0e0e0;
+    border-top: 1px dashed var(--color-divider);
 }
 
 .navigation-links .nav-button {
@@ -289,8 +290,8 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #343a40; /* Dark grey for footer */
-    color: #f8f9fa; /* Light text color */
+    background-color: var(--color-accent-brown); /* Muted brown for footer */
+    color: var(--color-background-light); /* Light text color */
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
@@ -315,6 +316,9 @@ body {
     .ep-header h1 .fas,
     .ep-header h1 .fab {
         font-size: 2.2rem;
+    }
+    .ep-description {
+        font-size: 1rem;
     }
     .content-block {
         flex-direction: column;
