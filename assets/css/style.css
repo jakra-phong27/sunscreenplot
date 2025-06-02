@@ -1,0 +1,379 @@
+/* assets/css/style.css */
+
+/* General Body Styles */
+body {
+    font-family: 'Anuphan', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light background for the page */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and Navigation Bar */
+.header {
+    background-color: #28a745; /* Green for the header */
+    color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .logo:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap; /* Allow links to wrap */
+    gap: 15px; /* Space between nav items */
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Main Infographic Container */
+.infographic-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    flex-grow: 1; /* Allows container to take available space */
+}
+
+/* EP Header Section */
+.ep-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.ep-header h1 {
+    font-size: 2.5rem;
+    color: #28a745; /* Green for main titles */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.ep-header h1 .fas,
+.ep-header h1 .fab {
+    font-size: 2.8rem;
+    color: #4CAF50; /* Slightly darker green for main icons */
+}
+
+.ep-description {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    margin: 15px auto 10px;
+    max-width: 700px;
+}
+
+.ep-keywords {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Content Sections within each EP */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between content blocks */
+    margin-top: 30px;
+}
+
+.content-block {
+    display: flex;
+    align-items: center;
+    background-color: #f9fdf9; /* Very light green for content blocks */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.content-block.reverse {
+    flex-direction: row-reverse; /* Reverse order for alternating layout */
+}
+
+.content-block .icon-wrapper {
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    width: 100px; /* Fixed width for icon area */
+    height: 100px; /* Fixed height for icon area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6f7ea; /* Light green background for icons */
+    border-radius: 50%; /* Circular background */
+    margin: 0 30px; /* Space around icon */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.content-block.reverse .icon-wrapper {
+    margin: 0 30px 0 0; /* Adjust margin for reverse layout */
+}
+
+.content-block .fas,
+.content-block .fab {
+    font-size: 3.5rem;
+    color: #28a745; /* Green icon color */
+}
+
+.content-block .icon-large { /* For larger icons in index page */
+    font-size: 4rem;
+}
+
+.content-block .text-content {
+    flex-grow: 1; /* Allows text content to take remaining space */
+}
+
+.content-block .text-content h2 {
+    color: #28a745;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.content-block .text-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+}
+
+.content-block .text-content ul li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.content-block .text-content ul li .fas,
+.content-block .text-content ul li .fab {
+    color: #4CAF50;
+    font-size: 1.1rem;
+    margin-top: 3px; /* Align icon with text */
+}
+
+.highlight-box {
+    background-color: #fff3cd; /* Light yellow background */
+    border-left: 5px solid #ffc107; /* Yellow left border */
+    padding: 15px 20px;
+    margin-top: 25px;
+    border-radius: 5px;
+    font-style: italic;
+    color: #856404; /* Darker yellow text */
+    font-weight: 500;
+}
+
+.highlight-box p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.highlight-box .fas {
+    color: #ffc107;
+}
+
+
+/* Specific Styling for Single-Page Layout (all-ep-infographic.html) */
+.ep-section {
+    margin-bottom: 60px; /* Space between each EP */
+    padding-bottom: 40px;
+    border-bottom: 2px dashed #e0e0e0; /* Visual separator between EPs */
+}
+
+.ep-section:last-child {
+    border-bottom: none; /* No border for the last EP */
+    margin-bottom: 0;
+}
+
+.ep-section .ep-header h1 {
+    font-size: 2.2rem;
+    color: #28a745;
+    margin-top: 0;
+}
+.ep-section .ep-description {
+    font-style: italic;
+    color: #666;
+}
+.ep-section .ep-keywords {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Call to Action Specific Styling for single page or nav buttons */
+.nav-button {
+    display: inline-block;
+    background-color: #28a745; /* Green button */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.nav-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px);
+}
+
+.navigation-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px dashed #e0e0e0;
+}
+
+.navigation-links .nav-button {
+    margin-top: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40; /* Dark grey for footer */
+    color: #f8f9fa; /* Light text color */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .ep-header h1 {
+        font-size: 1.8rem;
+        flex-direction: column; /* Stack icon and text */
+        gap: 5px;
+    }
+    .ep-header h1 .fas,
+    .ep-header h1 .fab {
+        font-size: 2.2rem;
+    }
+    .content-block {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content-block.reverse {
+        flex-direction: column; /* Keep column for reverse on small screens too */
+    }
+    .content-block .icon-wrapper {
+        margin: 0 auto 20px; /* Center icon above text */
+    }
+    .content-block.reverse .icon-wrapper {
+        margin: 0 auto 20px; /* Center icon above text for reverse also */
+    }
+    .content-block .text-content h2 {
+        text-align: center;
+    }
+    .content-block .text-content ul {
+        text-align: left; /* Keep bullet points aligned left */
+        padding-left: 20px;
+    }
+    .navigation-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .infographic-container {
+        margin: 15px auto;
+        padding: 15px;
+    }
+    .nav-links {
+        gap: 10px;
+    }
+    .nav-links a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+    .ep-header h1 {
+        font-size: 1.6rem;
+    }
+    .ep-header h1 .fas,
+    .ep-header h1 .fab {
+        font-size: 2rem;
+    }
+    .ep-description {
+        font-size: 1rem;
+    }
+    .content-block .icon-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+    .content-block .fas,
+    .content-block .fab {
+        font-size: 3rem;
+    }
+    .content-block .text-content h2 {
+        font-size: 1.5rem;
+    }
+}
