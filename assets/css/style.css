@@ -1,21 +1,21 @@
 /* assets/css/style.css */
 
-/* Define Filmmaker/Production color palette */
+/* Define Brand Color Palette */
 :root {
     --color-background-light: #FDFBF6; /* Very light cream/off-white - Base for content */
-    --color-primary-dark: #343A40; /* Dark Charcoal/Near Black - Main brand color, header, strong accents */
-    --color-secondary-gold: #D4AF37; /* Muted Gold/Bronze - Accent for icons, highlights (subtle) */
+    --color-primary-dark: #404851; /* Dark Charcoal/Near Black - Main brand color, header, strong accents */
+    --color-secondary-gold: #ac9342; /* Muted Gold/Bronze - Accent for icons, highlights (subtle) */
     --color-text-light: #F8F9FA; /* Off-white for text on dark backgrounds */
     --color-text-dark: #212529; /* Very dark grey/black for readability on light backgrounds */
-    --color-text-medium: #6C757D; /* Medium grey for descriptions/secondary text */
+    --color-text-medium: #6f767c; /* Medium grey for descriptions/secondary text */
     --color-highlight-bg: #E9ECEF; /* Light grey for highlight boxes */
     --color-highlight-border: #CED4DA; /* Muted border for highlights */
-    --color-highlight-text: #495057; /* Darker grey for highlight text */
+    --color-highlight-text: #50565c; /* Darker grey for highlight text */
     --color-divider: #E0E0E0; /* Light grey for dividers */
     --color-icon-bg: rgba(52, 58, 64, 0.05); /* Very light transparent dark for icons */
 }
 
-/* Font Adjustments for a more 'Filmmaker' feel */
+/* Font Adjustments */
 body {
     font-family: 'Anuphan', sans-serif; /* Keeping Anuphan for readability */
     margin: 0;
@@ -52,7 +52,6 @@ html {
 }
 
 /* Removed .navbar and .nav-links styles as they are no longer needed */
-/* The .navbar .logo selector is changed to .header .logo assuming the HTML structure is simplified */
 .header .logo {
     font-size: 2.5rem; /* Much larger logo size */
     font-weight: 800; /* Extra bold for prominence */
@@ -64,7 +63,7 @@ html {
 }
 
 .header .logo:hover {
-    color: #FFD700; /* Brighter gold on hover */
+    color: #9a5990; /* Brighter gold on hover */
     transform: scale(1.02); /* Slight scale effect on hover */
 }
 
@@ -88,7 +87,7 @@ html {
 }
 
 .ep-header h1 {
-    font-size: 1.8rem; /* Adjusted: Smaller font size for main heading */
+    font-size: 1.8rem; /* Main heading font size for each EP */
     color: var(--color-primary-dark); /* Dark for main titles */
     margin-bottom: 10px;
     display: flex;
@@ -101,7 +100,7 @@ html {
 
 .ep-header h1 .fas,
 .ep-header h1 .fab {
-    font-size: 2rem; /* Adjusted: Smaller font size for icons in heading */
+    font-size: 2rem; /* Icon size in main heading */
     color: var(--color-secondary-gold); /* Gold for main icons */
 }
 
@@ -179,8 +178,8 @@ html {
 }
 
 .content-block .text-content h2 {
+    font-size: 1.4rem; /* Adjusted: Smaller font size for h2 within text-content */
     color: var(--color-text-dark);
-    font-size: 1.8rem;
     margin-top: 0;
     margin-bottom: 15px;
     border-bottom: 2px solid var(--color-divider);
@@ -318,6 +317,7 @@ html {
         margin: 0 auto 20px;
     }
     .content-block .text-content h2 {
+        font-size: 1.3rem; /* Adjusted: Responsive font size for h2 */
         text-align: center;
     }
     .content-block .text-content ul {
@@ -378,9 +378,8 @@ html {
         font-size: 3rem;
     }
     .content-block .text-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem; /* Adjusted: Smallest font size for h2 on mobile */
     }
-
     /* Specific Header adjustments for 480px */
     html {
         scroll-padding-top: 70px; /* Adjust for mobile header height */
