@@ -31,7 +31,7 @@ body {
 /* Ensure smooth scrolling and correct padding for sticky header */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 140px; /* Adjust if header height changes significantly */
+    scroll-padding-top: 160px; /* Adjust if header height changes significantly */
 }
 
 /* Header and Navigation Bar */
