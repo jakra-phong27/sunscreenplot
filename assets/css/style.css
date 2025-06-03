@@ -109,7 +109,7 @@ html {
 }
 
 .ep-header h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem; /* Adjusted: Smaller font size for main heading */
     color: var(--color-primary-dark); /* Dark for main titles */
     margin-bottom: 10px;
     display: flex;
@@ -122,7 +122,7 @@ html {
 
 .ep-header h1 .fas,
 .ep-header h1 .fab {
-    font-size: 2.8rem;
+    font-size: 2rem; /* Adjusted: Smaller font size for icons in heading */
     color: var(--color-secondary-gold); /* Gold for main icons */
 }
 
@@ -314,13 +314,13 @@ html {
         margin-top: 10px;
     }
     .ep-header h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem; /* Adjusted: Responsive font size */
         flex-direction: column;
         gap: 5px;
     }
     .ep-header h1 .fas,
     .ep-header h1 .fab {
-        font-size: 2.2rem;
+        font-size: 1.9rem; /* Adjusted: Responsive icon size */
     }
     .ep-description {
         font-size: 1rem;
@@ -365,11 +365,11 @@ html {
         font-size: 0.9rem;
     }
     .ep-header h1 {
-        font-size: 1.6rem;
+        font-size: 1.4rem; /* Adjusted: Responsive font size */
     }
     .ep-header h1 .fas,
     .ep-header h1 .fab {
-        font-size: 2rem;
+        font-size: 1.7rem; /* Adjusted: Responsive icon size */
     }
     .ep-description {
         font-size: 1rem;
