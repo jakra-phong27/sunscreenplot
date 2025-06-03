@@ -31,62 +31,41 @@ body {
 /* Ensure smooth scrolling and correct padding for sticky header */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Adjust if header height changes significantly */
+    scroll-padding-top: 110px; /* Adjusted based on new header height */
 }
 
 /* Header and Navigation Bar */
 .header {
-    background-color: var(--color-primary-dark); /* Dark charcoal for the header */
+    background-color: #2C3E50; /* Deep blue-grey for a premium feel */
     color: var(--color-text-light);
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Deeper shadow for professional feel */
+    padding: 20px 0; /* Increased padding for more spacious look */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3); /* Stronger, more defined shadow */
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex; /* Ensure flexbox for centering */
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center; /* Center content vertically */
+    min-height: 70px; /* Substantial height for header */
+    border-bottom: 3px solid var(--color-secondary-gold); /* Gold accent line at the bottom */
+    box-sizing: border-box; /* Include padding in height calculation */
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    flex-wrap: wrap;
-}
-
-.navbar .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
+/* Removed .navbar and .nav-links styles as they are no longer needed */
+/* The .navbar .logo selector is changed to .header .logo assuming the HTML structure is simplified */
+.header .logo {
+    font-size: 2.5rem; /* Much larger logo size */
+    font-weight: 800; /* Extra bold for prominence */
     color: var(--color-secondary-gold); /* Gold accent for logo */
     text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    letter-spacing: 2px; /* Increased letter spacing for a grander look */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4); /* Subtle text shadow for depth */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
-.navbar .logo:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.nav-links a {
-    color: var(--color-text-light);
-    text-decoration: none;
-    font-weight: 400;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
+.header .logo:hover {
+    color: #FFD700; /* Brighter gold on hover */
+    transform: scale(1.02); /* Slight scale effect on hover */
 }
 
 /* Main Infographic Container */
@@ -305,11 +284,11 @@ html {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .navbar {
+    .navbar { /* This rule is likely not needed if navbar is removed from HTML */
         flex-direction: column;
         gap: 10px;
     }
-    .nav-links {
+    .nav-links { /* This rule is likely not needed if nav-links is removed from HTML */
         justify-content: center;
         margin-top: 10px;
     }
@@ -350,6 +329,22 @@ html {
         align-items: center;
         gap: 15px;
     }
+
+    /* Specific Header adjustments for 768px */
+    html {
+        scroll-padding-top: 90px; /* Adjust for tablet header height */
+    }
+    body {
+        padding-top: 90px; /* Adjust for tablet header height */
+    }
+    .header {
+        padding: 15px 0; /* Adjust padding for tablets */
+        min-height: 60px; /* Slightly smaller min-height */
+    }
+    .header .logo {
+        font-size: 2rem; /* Smaller logo on tablets */
+        letter-spacing: 1.5px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -357,10 +352,10 @@ html {
         margin: 15px auto;
         padding: 15px;
     }
-    .nav-links {
+    .nav-links { /* This rule is likely not needed if nav-links is removed from HTML */
         gap: 10px;
     }
-    .nav-links a {
+    .nav-links a { /* This rule is likely not needed if nav-links is removed from HTML */
         padding: 6px 10px;
         font-size: 0.9rem;
     }
@@ -384,5 +379,21 @@ html {
     }
     .content-block .text-content h2 {
         font-size: 1.5rem;
+    }
+
+    /* Specific Header adjustments for 480px */
+    html {
+        scroll-padding-top: 70px; /* Adjust for mobile header height */
+    }
+    body {
+        padding-top: 70px; /* Adjust for mobile header height */
+    }
+    .header {
+        padding: 10px 0; /* Even smaller padding on mobile */
+        min-height: 50px; /* Smallest min-height on mobile */
+    }
+    .header .logo {
+        font-size: 1.6rem; /* Smallest logo on mobile */
+        letter-spacing: 1px;
     }
 }
