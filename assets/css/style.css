@@ -29,6 +29,12 @@ body {
     min-height: 100vh;
 }
 
+/* Ensure smooth scrolling and correct padding for sticky header */
+html {
+    scroll-behavior: smooth; /* ทำให้การเลื่อนในหน้าเป็นไปอย่างนุ่มนวล */
+    scroll-padding-top: 100px; /* ปรับค่านี้ให้มากกว่าความสูงของ Header ของคุณ เพื่อไม่ให้เนื้อหาถูกบัง */
+}
+
 /* Header and Navigation Bar */
 .header {
     background-color: var(--color-primary-brick); /* Brick color for the header */
